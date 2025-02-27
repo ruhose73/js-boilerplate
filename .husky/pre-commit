@@ -1,1 +1,1 @@
-npm eslint:fix
+npm run eslint:fix
