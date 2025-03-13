@@ -1,20 +1,16 @@
-import pluginJs from "@eslint/js";
+const conventionalConfig = require("@commitlint/config-conventional");
 
-export default [
-  pluginJs.configs.recommended,
-
-  {
-    languageOptions: {
-      globals: {
-        require: "readonly",
-        process: "readonly",
-        console: "readonly",
-      },
+module.exports = {
+  languageOptions: {
+    globals: {
+      require: "readonly",
+      process: "readonly",
+      console: "readonly",
+      module: "readonly",
     },
-    rules: {
-      "no-unused-vars": "warn",
-      "no-undef": "warn",
-    },
-    ignores: ["node_modules", "dist", "build"],
   },
-];
+  rules: {
+    ...conventionalConfig.rules,
+  },
+  ignores: ["node_modules", "dist", "build"],
+};

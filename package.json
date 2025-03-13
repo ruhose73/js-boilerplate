@@ -7,10 +7,10 @@
     "prepare": "husky",
     "eslint:fix": "eslint . --fix",
     "eslint": "eslint .",
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "start": "node src/index.js",
+    "server": "nodemon src/index.js"
   },
-  "type": "module",
+  "type": "commonjs",
   "author": "",
   "license": "ISC",
   "description": "",
@@ -26,6 +26,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "pg": "^8.13.3",
     "sequelize": "^6.37.5"
   }
 }
